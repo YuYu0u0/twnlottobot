@@ -142,6 +142,7 @@ def win_lotto(numbers, lotto_number, txtnum):
     count = 0
     if len(numbers) != 6:
         result = '請輸入6個號碼'
+        return result
     sNum = lotto_number[txtnum][-1]
 
     for num in numbers:
