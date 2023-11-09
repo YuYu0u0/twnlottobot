@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-
+# 記得將main寫進去以免找不到
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

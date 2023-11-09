@@ -149,28 +149,28 @@ def win_lotto(numbers, lotto_number, txtnum):
         if num in lotto_number[txtnum]:
             count += 1
 
-        if count == 6:
-            if sNum in num:
-                result = "恭喜中二獎"
-            else:
-                result = "恭喜中頭獎"
-        elif count == 5:
-            if sNum in num:
-                result = "恭喜中四獎"
-            else:
-                result = "恭喜中三獎"
-        elif count == 4:
-            if sNum in num:
-                result = "恭喜中六獎1000元"
-            else:
-                result = "恭喜中五獎2000元"
-        elif count == 3:
-            if sNum in num:
-                result = "恭喜中七獎400元"
-            else:
-                result = "恭喜中普獎400元"
+    if count == 6:
+        if sNum in numbers:
+            result = "恭喜中二獎"
         else:
-            result = "沒中獎,再接再厲!!"
+            result = "恭喜中頭獎"
+    elif count == 5:
+        if sNum in numbers:
+            result = "恭喜中四獎"
+        else:
+            result = "恭喜中三獎"
+    elif count == 4:
+        if sNum in numbers:
+            result = "恭喜中六獎1000元"
+        else:
+            result = "恭喜中五獎2000元"
+    elif count == 3:
+        if sNum in numbers:
+            result = "恭喜中七獎400元"
+        else:
+            result = "恭喜中普獎400元"
+    else:
+        result = "沒中獎,再接再厲!!"
 
     return result
 
@@ -178,7 +178,7 @@ def win_lotto(numbers, lotto_number, txtnum):
 # 測試
 if __name__ == "__main__":
     show_lottoNum(107, 12)
-    numbers = ['21', '07', '47', '44', '08', '13']
+    numbers = ['13', '21', '07', '47', '44', '08']
     txtnum = '112000101'
     print(lotto_radNo(txtnum))
     print(win_lotto(numbers, lotto_radNo(txtnum), txtnum))
