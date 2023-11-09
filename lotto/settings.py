@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-bs*e1gqbe4%pwwts_nzb72ieb#af$b#dsd%a_f0+k*_)xvcpfb"
 
 # linebot的token跟密鑰
-LINE_CHANNEL_SECRET = "338d9395f828350abb3a7c42bbc3710f"
-LINE_CHANNEL_ACCESS_TOKEN = "w549qr3xnR+kQbKLySoZKYYppiWfc2lVV061QJzJaRGJ1DWFa6ri4q4bOAGBDPzTuHnVLs6C6QEj2WNsWos/ydOV01N4eX8xU1pS9dJrOzVbFYnEotHDtbGhglJhaSibBRtKp5sfnb7w3dZJ4u56NgdB04t89/1O/w1cDnyilFU="
+LINE_CHANNEL_SECRET = "YOUR_LINE_CHANNEL_SECRET"
+LINE_CHANNEL_ACCESS_TOKEN = "YOUR_LINE_CHANNEL_ACCESS_TOKEN"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
