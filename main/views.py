@@ -21,7 +21,6 @@ txtnum = ''
 
 
 @require_POST
-@csrf_exempt
 def callback(request):
     global lotto_mode
     global mode2_status
