@@ -19,7 +19,7 @@ lotto_mode = 0
 mode2_status = False
 txtnum = ''
 
-
+@csrf_exempt
 @require_POST
 def callback(request):
     global lotto_mode
