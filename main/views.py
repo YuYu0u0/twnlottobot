@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_http_methods
 from linebot import LineBotApi, WebhookHandler, WebhookParser
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import MessageEvent, TextSendMessage, TextMessage, ImageSendMessage
@@ -20,7 +20,12 @@ mode2_status = False
 txtnum = ''
 
 
-@require_POST
+
+def require_GET_or_POST(view_func):
+    decorated_view_func = require_http_methods(["GET", "POST"])(view_func)
+    return decorated_view_func
+
+@require_GET_or_POST
 def callback(request):
     global lotto_mode
     global mode2_status
