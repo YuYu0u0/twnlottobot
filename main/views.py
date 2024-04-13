@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST,require_http_methods
 from linebot import LineBotApi, WebhookHandler, WebhookParser
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import MessageEvent, TextSendMessage, TextMessage, ImageSendMessage
@@ -19,8 +19,8 @@ lotto_mode = 0
 mode2_status = False
 txtnum = ''
 
-@csrf_exempt
-@require_POST
+
+@require_http_methods
 def callback(request):
     global lotto_mode
     global mode2_status

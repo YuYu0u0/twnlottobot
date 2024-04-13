@@ -61,12 +61,12 @@ def show_lottoNum(year, month):
             print('輸入錯誤')
             return '輸入錯誤'
         for data in datas:
-            result = data+" "+datas[data][0]+"期\t"
+            result = data+" "+str(datas[data][0])+"期\t"
             for i in datas[data][1:7]:
-                result += i+" "
-            result += "特別號:"+datas[data][-1]
+                result += str(i)+" "
+            result += "特別號:"+str(datas[data][-1])
             results += "\n"+result
-        return results.strip()
+        return results
     except Exception as e:
         print(e)
 
@@ -111,8 +111,8 @@ def win_lotto(numbers, lotto_number, txtnum):
 # 測試
 if __name__ == "__main__":
     # print(lotto_radYM(107,12))
-    # show_lottoNum(107,2)
+    print(show_lottoNum(107,2))
     numbers = ['13', '21', '07', '47', '44', '08']
     txtnum = '112000101'
     # print(lotto_radNo(txtnum))
-    print(win_lotto(numbers, lotto_radNo(txtnum), txtnum))
+    # print(win_lotto(numbers, lotto_radNo(txtnum), txtnum))
