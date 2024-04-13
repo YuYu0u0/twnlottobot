@@ -51,7 +51,7 @@ def callback(request):
                     elif lotto_mode == 1:  # 月份對獎模式
                         year = message.strip().split(' ')[0]
                         month = message.strip().split(' ')[1]
-                        message_text = show_lottoNum(year, month)
+                        message_text = show_lottoNum(int(year), int(month))
                         message_text += "\n請輸入年(民國)月份(以空格隔開)(0:離開)"
                     elif lotto_mode == 2:
                         if mode2_status:  # 輸入對獎號碼以空格隔開
